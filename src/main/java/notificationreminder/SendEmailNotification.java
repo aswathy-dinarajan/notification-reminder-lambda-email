@@ -32,7 +32,7 @@ import com.amazonaws.services.lambda.runtime.events.SNSEvent.SNSRecord;
 public class SendEmailNotification implements RequestHandler<SNSEvent, Object> {
 	Gson gson = new GsonBuilder().setPrettyPrinting().create();
 	AmazonSNS snsClient = AmazonSNSClient.builder().build();
-    private String from = "achu.135@gmail.com";
+    private String from = "from email";
 	
     public Object handleRequest(SNSEvent input,Context context) {
 		LambdaLogger logger = context.getLogger();
